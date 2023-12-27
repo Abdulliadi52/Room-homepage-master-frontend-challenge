@@ -199,9 +199,10 @@ footer {
     justify-content: start;
     background-color: white;
     padding: 25px;
+    gap: 15px;
   }
   li:nth-child(1) {
-    margin-right: 30px;
+    margin-right: 16px;
   }
   .close {
     display: block;
