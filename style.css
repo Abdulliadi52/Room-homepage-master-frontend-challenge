@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+.flex-container {
+  display: flex;
+  max-width: 100vw;
+  height: 65vh;
+  position: relative;
+}
+
+.image-container {
+  width: 60%;
+  position: relative;
+  padding: 20px;
+}
+header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  gap: 40px;
+  color: white;
+  font-weight: 700;
+}
+ul a {
+  color: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+ul a:hover {
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-thickness: 3px;
+}
+.logo-img {
+  width: 100%;
+}
+.burger,
+.close {
+  display: none;
+}
+.content {
+  width: 40%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px;
+  position: relative;
+}
+.content h2 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+.content p {
+  color: hsl(0, 0%, 63%);
+  margin-bottom: 20px;
+  line-height: 20px;
+}
+.aside {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.aside h5 {
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 12px;
+  color: hsl(0, 0%, 27%);
+}
+.image-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.image-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+.btn {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100px;
+}
+.btn span {
+  cursor: pointer;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 10px;
+  background-color: black;
+}
+.btn span:nth-child(2) {
+  background-color: hsl(0, 0%, 27%);
+}
+.grid-container {
+  display: flex;
+  max-width: 100vw;
+  align-items: stretch;
+}
+.grid-image {
+  width: 30%;
+}
+.grid-content {
+  width: 40%;
+  padding: 20px;
+}
+.grid-content h2 {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+.grid-content p {
+  color: hsl(0, 0%, 63%);
+}
+.grid-container img {
+  width: 100%;
+  height: 100%;
+}
+footer {
+  padding: 20px;
+  background-color: hsl(0, 0%, 0%);
+}
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  color: white;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  font-weight: 900;
+}
+
+@media screen and (max-width: 1030px) {
+  .content {
+    padding: 30px;
+  }
+  .content h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
+  .content p {
+    line-height: 16px;
+    margin-bottom: 15px;
+  }
+  ul {
+    gap: 30px;
+  }
+  header {
+    gap: 30px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    transform: translate(-100%);
+    opacity: 0;
+  }
+  .nav.active {
+    transform: translate(0);
+    opacity: 100%;
+  }
+  ul {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: hsl(0, 0%, 0%);
+    align-items: center;
+    justify-content: start;
+    background-color: white;
+    padding: 25px;
+  }
+  li:nth-child(1) {
+    margin-right: 30px;
+  }
+  .close {
+    display: block;
+    cursor: pointer;
+  }
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+  }
+  .flex-container {
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+  }
+  .image-container {
+    width: 100%;
+    height: 800px;
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+  }
+  .grid-container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .grid-image {
+    width: 100%;
+    height: fit-content;
+  }
+  .grid-content {
+    width: 100%;
+    padding: 40px;
+  }
+  .btn {
+    top: -55px;
+    right: 0;
+    bottom: unset;
+    left: unset;
+  }
+  .static {
+    position: fixed;
+  }
+}
